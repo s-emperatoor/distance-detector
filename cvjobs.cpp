@@ -95,16 +95,16 @@ void CVJobs::run( Net net , CascadeClassifier faceCascade)
         fpsOpencv = 1/tt_opencvDNN;
 
 
-//        if(num == 2)
-//        {
-//            putText(frame, format("OpenCV HAAR ; FPS = %.2f",fpsOpencv), Point(10, 50), FONT_HERSHEY_SIMPLEX, 1.3, Scalar(0, 0, 255), 4);
-//            imshow("OpenCV - HAAR Face Detection", frame);
-//        }
-//        else
-//        {
-//            putText(frame, format("OpenCV DNN %s FPS = %.2f", QString("CPU").toStdString().c_str(), fpsOpencv), Point(5, 50), FONT_HERSHEY_SIMPLEX, 1.3, Scalar(0, 0, 255), 4);
-//            imshow("OpenCV - DNN Face Detection",frame);
-//        }
+        if(num == 2)
+        {
+            putText(frame, format("OpenCV HAAR ; FPS = %.2f",fpsOpencv), Point(10, 50), FONT_HERSHEY_SIMPLEX, 1.3, Scalar(0, 0, 255), 4);
+            imshow("OpenCV - HAAR Face Detection", frame);
+        }
+        else
+        {
+            putText(frame, format("OpenCV DNN %s FPS = %.2f", QString("CPU").toStdString().c_str(), fpsOpencv), Point(5, 50), FONT_HERSHEY_SIMPLEX, 1.3, Scalar(0, 0, 255), 4);
+            imshow("OpenCV - DNN Face Detection",frame);
+        }
 
 //        int k = waitKey(5);
 //        if(k == 27)
@@ -118,7 +118,7 @@ void CVJobs::run( Net net , CascadeClassifier faceCascade)
 //            destroyAllWindows();
 //            return;
 //        }
-        usleep(1000000);
+//        usleep(1000000);
     }
     qDebug()<<"exited";
 }
